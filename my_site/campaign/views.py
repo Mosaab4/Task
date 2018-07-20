@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import render,redirect
+from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.views.generic import (
     ListView, 
     FormView,
@@ -19,7 +21,7 @@ class CampaignListView(ListView):
     template_name = 'campaign/list.html'
 
 
-class AddView(FormView):
+class AddView(LoginRequiredMixin,FormView):
     template_name = 'campaign/add.html'
     form_class = CampaignForm
     model = Campaign
@@ -30,7 +32,7 @@ class AddView(FormView):
 
         return redirect('campaign:list')
 
-class UpdateView(UpdateView):
+class UpdateView(LoginRequiredMixin,UpdateView):
     model = Campaign
     template_name = 'campaign/add.html'
     form_class = CampaignForm
@@ -42,3 +44,15 @@ class UpdateView(UpdateView):
 
         return redirect('campaign:list')
 
+class DeleteView(LoginRequiredMixin,DeleteView):
+    model = Campaign
+    pk_url_kwarg = 'pk'	
+
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.delete()
+        return redirect('campaign:list')
+
+
+    

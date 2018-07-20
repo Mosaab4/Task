@@ -113,7 +113,7 @@
                                                                     <td>{{ campaign.stop_date }}</td>
                                                                     <td>{{ campaign.description }}</td>
                                                                     <td>
-                                                                        <a href="#" title="Delete Campaign">
+                                                                        <a href="{% url 'campaign:delete' pk=campaign.pk %}" title="Delete Campaign">
                                                                             <span class="fa fa-trash-o black"></span>
                                                                         </a>
                                                                         <a title="Edit Campaign" href="{% url 'campaign:update' pk=campaign.pk %}">
