@@ -1,0 +1,316 @@
+{% extends "campaign/base.html" %}
+
+{% block content%}
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="./static/assets/img/sidebar-5.jpg">
+
+            <!--
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->
+
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="http://trobalit.com" class="simple-text">
+                        DSP EXERCISE
+                    </a>
+                </div>
+
+                <ul class="nav">
+                    <li class="aa">
+                        <a href="list.html">
+                            <i class="pe-7s-note2"></i>
+                            <p>Campaings</p>
+                        </a>
+                    </li>
+                    <li class="bb">
+                        <a href="add.html">
+                            <i class="fa fa-plus"></i>
+                            <p>Add Campaign</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Dashboard</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-dashboard"></i>
+                                    <p class="hidden-lg hidden-md">Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-sm hidden-xs"></b>
+                                    <span class="notification hidden-sm hidden-xs">5</span>
+                                    <p class="hidden-lg hidden-md">
+                                        5 Notifications
+                                        <b class="caret"></b>
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Notification 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Notification 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Notification 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Notification 4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another notification</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-search"></i>
+                                    <p class="hidden-lg hidden-md">Search</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="">
+                                    <p>Account</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <p>
+                                        Shortcuts
+                                        <b class="caret"></b>
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="https://gmail.com">Gmail</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://translate.google.es">Google Translate</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="https://linkedin.com">Linkedin</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/logout/" id="logout">
+                                    <p>Log out</p>
+                                </a>
+                            </li>
+                            <li class="separator hidden-lg hidden-md"></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="content" id="util">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="header">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h4 class="title">Campaigns</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal" tabindex="-999" role="dialog" id="modalSureOptimize">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header panel-heading">
+                                                <p class="modal-title">Running Optimization</p>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Are you sure to run the optimization now ?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary btn-info btn-fill">Yes</button>
+                                                <button type="button" class="btn btn-secondary btn-fill" data-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div id="reportresult">
+                                                    <div class="panel panel-primary">
+                                                        <div class="panel-heading">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-search"></i>
+                                                                </span>
+                                                                <input type="text" class="form-control" placeholder="Search">
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="content table-responsive">
+                                                                <table class="table table-hover table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>
+                                                                                <a>
+                                                                                    Campaign ID
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a>
+                                                                                    Name
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a href="">
+                                                                                    Status
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a href="">
+                                                                                    Type
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a href="">
+                                                                                    Stop Date
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a href="">
+                                                                                    Description
+                                                                                </a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                            <th>
+                                                                                <a>Action</a>
+                                                                                <span class="caret" style="cursor: pointer"></span>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        {% for campaign in campaigns%}
+                                                                            <tr>
+                                                                                <td>{{ campaign.id }}</td>
+                                                                                <td>{{ campaign.name }}</td>
+                                                                                <td>                    
+                                                                                        {% if campaign.status == 'enabled' %}
+                                                                                            <span class="label label-success" >{{ campaign.status }}</span>  
+                                                                                        {% else %}
+                                                                                            <span class="label label-danger" >{{ campaign.status }}</span>  
+                                                                                        {% endif %}                                            
+                                                                                        
+
+                                                                                </td>
+                                                                                <td>{{ campaign.type }}</td>
+                                                                                <td>{{ campaign.stop_date }}</td>
+                                                                                <td>{{ campaign.description }}</td>
+                                                                                <td>
+                                                                                    <a href="#" title="Delete Campaign">
+                                                                                        <span class="fa fa-trash-o black"></span>
+                                                                                    </a>
+                                                                                    <a title="Edit Campaign" href="addcampaign.html?editcamp={{campaign.id}}">
+                                                                                        <span class="fa fa-edit black"></span>
+                                                                                    </a>
+                                                                                    <a title="Add Campaign" href="addcampaign.html">
+                                                                                        <span class="fa fa-plus black"></span>
+                                                                                    </a>
+                                                                                    <a title="{{campaign.notes}}" href="#">
+                                                                                        <span class="fa fa-tags black"></span>
+                                                                                    </a>
+                                                                                    <a href="#" title="Run Optimizator to this campaign({{campaign.id}})">
+                                                                                        <span class="fa fa-history black"></span>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        {% endfor %}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Company
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#clients">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact-us">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="copyright pull-right">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        <a href="https://www.trobalit.com">Trobalit</a>, made with love and time.
+                    </p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+{% endblock content%}

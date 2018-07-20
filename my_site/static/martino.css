@@ -1,0 +1,31 @@
+
+/*body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(1),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(2),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(3),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(4),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(6),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(7),
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(3),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(1),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(2),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(3),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(6),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(7),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(8),
+body > table > tbody > tr:nth-child(21) > td,
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(4),
+body > table > tbody > tr:nth-child(13) > td > nobr > input[type="button"]:nth-child(5),
+body > table > tbody > tr:nth-child(23) > td
+{     display: none; }
+*/
+input[type="button"],
+td[align="center"] {
+ display:none; 
+}
+body > table > tbody > tr:nth-child(1) > td > nobr > form:nth-child(1) > input[type="button"]:nth-child(5),
+body > table > tbody > tr:nth-child(3) > td:nth-child(2) > input[type="button"]
+{
+	display:block;
+}
+
+
