@@ -116,7 +116,7 @@
                                                                         <a href="#" title="Delete Campaign">
                                                                             <span class="fa fa-trash-o black"></span>
                                                                         </a>
-                                                                        <a title="Edit Campaign" href="addcampaign.html?editcamp={{campaign.id}}">
+                                                                        <a title="Edit Campaign" href="{% url 'campaign:update' pk=campaign.pk %}">
                                                                             <span class="fa fa-edit black"></span>
                                                                         </a>
                                                                         <a title="Add Campaign" href="{% url 'campaign:add' %}">
