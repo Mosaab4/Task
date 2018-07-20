@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import django_cron
+
+django_cron.admin.admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),

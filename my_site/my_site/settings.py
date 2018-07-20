@@ -25,8 +25,7 @@ SECRET_KEY = 'l1o^+8@64=a)j16u!)+nj1%i@)ad^7b2_zbqd=te=xm*4^$18b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['34.219.143.77']
 
 # Application definition
 
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'campaign',
     'crispy_forms',
+    'django_cron',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +128,6 @@ STATICFILES_DIRS = (
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+

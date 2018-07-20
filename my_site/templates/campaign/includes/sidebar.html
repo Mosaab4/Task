@@ -1,0 +1,32 @@
+<div class="sidebar" data-color="purple" data-image="./static/assets/img/sidebar-5.jpg">
+
+    <!--
+
+    Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+    Tip 2: you can also add an image using data-image tag
+
+-->
+
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a href="http://trobalit.com" class="simple-text">
+                DSP EXERCISE
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li class="aa">
+                <a href="{% url 'campaign:list'%}">
+                    <i class="pe-7s-note2"></i>
+                    <p>Campaings</p>
+                </a>
+            </li>
+            <li class="bb">
+                <a href="{% url 'campaign:add' %}">
+                    <i class="fa fa-plus"></i>
+                    <p>Add Campaign</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
